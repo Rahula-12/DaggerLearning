@@ -3,8 +3,18 @@ package com.example.daggerlearning
 import android.util.Log
 import javax.inject.Inject
 
-class EmailService @Inject constructor() {
-    fun sendEmail(to: String, mail: String) {
-        Log.d("DI", "Email $mail sent to $to.")
+interface NotificationService{
+    fun send(to: String, body: String)
+}
+class EmailService @Inject constructor() : NotificationService{
+    override fun send(to: String, body: String) {
+        Log.d("DI", "Email $body sent to $to.")
     }
+}
+
+class MessageService:NotificationService{
+    override fun send(to: String, body: String) {
+        Log.d("DI", "Message $body sent to $to.")
+    }
+
 }
