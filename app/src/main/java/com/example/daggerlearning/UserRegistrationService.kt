@@ -1,7 +1,9 @@
 package com.example.daggerlearning
 
+import javax.inject.Inject
+
 //Manual Dependency Injection
-class UserRegistrationService(private val userRepository: UserRepository,
+class UserRegistrationService @Inject constructor(private val userRepository: UserRepository,
                               private val emailService: EmailService
 ) {
 
