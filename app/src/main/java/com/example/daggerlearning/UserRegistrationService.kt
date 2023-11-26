@@ -1,10 +1,11 @@
 package com.example.daggerlearning
 
 import javax.inject.Inject
+import javax.inject.Named
 
 //Manual Dependency Injection
 class UserRegistrationService @Inject constructor(private val userRepository: UserRepository,
-                              private val notificationService: NotificationService
+                              @MessageQualifier private val notificationService: NotificationService
 ) {
 
     fun registerUser(email:String,password:String) {
