@@ -12,9 +12,9 @@ class EmailService @Inject constructor() : NotificationService{
     }
 }
 
-class MessageService:NotificationService{
+class MessageService(private val retryCount:Int):NotificationService{
     override fun send(to: String, body: String) {
-        Log.d("DI", "Message $body sent to $to.")
+        Log.d("DI", "Message $body sent to $to. after $retryCount counts.")
     }
 
 }
