@@ -14,5 +14,5 @@ class NotificationServiceModule {
     @ActivityScope // to return singleton object of messageService
     @MessageQualifier
     @Provides
-    fun getMessageService():NotificationService=MessageService(3)
+    fun getMessageService(retryCount:Int):NotificationService=MessageService(retryCount)
 }
