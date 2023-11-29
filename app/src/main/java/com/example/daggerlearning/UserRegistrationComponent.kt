@@ -4,7 +4,7 @@ import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
 
-@Singleton
+@ApplicationScope
 @Component(modules = [NotificationServiceModule::class,UserRepositoryModule::class,AnalyticsModule::class])
 interface UserRegistrationComponent {
 
