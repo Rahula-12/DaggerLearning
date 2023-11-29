@@ -8,10 +8,10 @@ import dagger.Subcomponent
 @Subcomponent(modules = [NotificationServiceModule::class,UserRepositoryModule::class])
 interface UserRegistrationComponent {
 
-    @Subcomponent.Factory
-    interface Factory{
-        fun create(@BindsInstance retryCount:Int):UserRegistrationComponent
-    }
+//    @Subcomponent.Factory
+//    interface Factory{
+//        fun create(@BindsInstance retryCount:Int):UserRegistrationComponent
+//    }
 
     fun inject(mainActivity: MainActivity)
 }
