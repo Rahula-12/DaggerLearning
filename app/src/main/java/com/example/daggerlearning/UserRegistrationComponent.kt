@@ -5,7 +5,7 @@ import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [NotificationServiceModule::class,UserRepositoryModule::class])
+@Component(modules = [NotificationServiceModule::class,UserRepositoryModule::class,AnalyticsModule::class])
 interface UserRegistrationComponent {
 
     @Component.Factory
