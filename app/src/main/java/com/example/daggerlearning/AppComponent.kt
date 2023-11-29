@@ -1,5 +1,4 @@
 package com.example.daggerlearning
-
 import dagger.Component
 import javax.inject.Singleton
 
